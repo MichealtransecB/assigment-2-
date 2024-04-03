@@ -1,0 +1,255 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: navy;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, lightblue, blue );
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* color scheme */
+:root {
+    --primary-color: blue;
+    --secondary-color: white;
+    --accent-color: red;
+    --text-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Nav style */
+nav {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    margin: 0.1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+header {
+    background: url('header-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+}
+
+section {
+    padding: 2em 0;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: aqua;
+    border: none;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Animated loading element */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
+
+.loading {
+    border: 4px solid white;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+/* Mobile screens */
+@media (max-width:400px) {
+    header {
+        padding: 1em 0;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav, footer {
+    background-color: black;
+    color: var(--text-color);
+}
+
+section {
+    background-color: white;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    animation: buttonpulse 1s infinite alternate;
+}
+
+@keyframes buttonpulse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+}
+
+/* contact*/
+
+.contact-container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px black;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 30em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: blue;
+}
+
+/* Responsive adjustments */ 
+@media (min-width: 760px) {
+    body {
+        padding: 40px;
+    }
+}
+
+/* Portfilio*/
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.project {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px black;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+.social-links li {
+    display: inline;
+    padding: 0;
+}
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Service */
+.service {
+    background-color: white;
+    color: gray;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translate(-5px);
+    box-shadow:  0 5px 15px black;
+}
+
+@media (max-width: 600px) {
+    header nav ul li {
+        display: block;
+        text-align: center;
+    }
+}
